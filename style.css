@@ -83,7 +83,7 @@ header {
 
 
 
-#buttons > button, #buttons > .canClick {
+#buttons > .click, #buttons > .canClick {
     transition: 5ms ease;
     border-radius: 0.3rem;
     width: 10rem;
@@ -93,9 +93,13 @@ header {
     border: solid #1b181a 1px;
 }
 
-#btnA {
+#buttons > .noClick {
     border: solid #1b181a 1px;
     background-color: #3e0229;
+    color: #1b181a;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 3rem;
 }
 
 #buttons > .canClick:hover, #buttons > .click:hover {

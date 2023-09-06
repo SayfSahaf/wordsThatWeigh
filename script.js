@@ -17,9 +17,12 @@ async function fetchQuote() {
       document.getElementById("qAuthor").innerHTML = '<p>- ' + result.originator.name + '</p>';
       if (result.originator.description == "") {
         AboutB.classList.remove('canClick');
+        AboutB.classList.add('noClick')
       }
       if (result.originator.description == !"") {
+        AboutB.classList.remove('noClick')
         AboutB.classList.add('canClick')
+        
       }
     } catch (error) {
       console.error(error);
