@@ -12,6 +12,8 @@ async function fetchQuote() {
     try {
       const response = await fetch(url, options);
       result = await response.json();
+      isToggled = false;
+      description.innerHTML = ''
       document.getElementById("quote").innerHTML = '<p>' + result.content + '</p>';
       document.getElementById("qAuthor").innerHTML = '<p>- ' + result.originator.name + '</p>';
       if (result.originator.description == "") {
