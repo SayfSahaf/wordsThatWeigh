@@ -35,7 +35,7 @@ fetchQuote();
 
 //getting the buttons and elements & initializing variables
 let result;
-const copyB = document.getElementById('btnC')
+const CopyB = document.getElementById('btnC')
 const AboutB = document.getElementById('btnA')
 const NextB = document.getElementById('btnN')
 const description = document.getElementById('description')
@@ -56,6 +56,23 @@ AboutB.addEventListener('click', function() {
         description.innerHTML = ''
     }
 })
+
+
+//adding code that will allow user to copy the quote as text
+
+CopyB.addEventListener("click", function(){
+    navigator.clipboard.writeText(`"${result.content}." - ${result.originator.name}`)
+        .then(() => {
+            alert('Copied')
+        })  
+        .catch((err) => {
+            console.log("Couldn't copy", err)
+        })
+})
+
+
+
+
 
 
 
