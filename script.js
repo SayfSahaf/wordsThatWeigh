@@ -1,4 +1,4 @@
-// api that fetches a quote
+// asynchronous function that uses an api to fetch an object containing the quote and other details
 async function fetchQuote() {
     const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
     const options = {
@@ -46,6 +46,7 @@ NextB.addEventListener("click", function() {
     fetchQuote();
 })
 
+//event listener to toggle the appearance of the description of the author of the quote being displayed
 AboutB.addEventListener('click', function() {
     isToggled = !isToggled
     if (isToggled) {
@@ -55,12 +56,6 @@ AboutB.addEventListener('click', function() {
         description.innerHTML = ''
     }
 })
-
-
-
-
-
-
 
 
 
