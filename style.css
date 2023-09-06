@@ -24,7 +24,6 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     font-size: 1.1rem;
-    border: solid white 1px;
 }
 
 
@@ -79,22 +78,27 @@ header {
     height: 3rem;
     background-color: #f52447;
     color: #1b181a;
-    border: none;
+    border: solid #1b181a 1px;
+}
+
+#buttons > .click:hover {
+    transition: 0.3s ease;
+    border: solid #21f1cf 1px;
 }
 
 
 footer {
-    padding: 0.5rem;
+    padding: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: smaller;
-    border: solid white 1px;
 }
 
 footer > #remark {
     color: #e7e4e6;
+    font-weight: lighter;
 }
 
 #link > a {
