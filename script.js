@@ -11,15 +11,15 @@ async function fetchQuote() {
   
     try {
       const response = await fetch(url, options);
-      const result = await response.json();
+      result = await response.json();
       console.log(result)
       document.getElementById("quote").innerHTML = '<p>' + result.content + '</p>';
       document.getElementById("qAuthor").innerHTML = '<p>- ' + result.originator.name + '</p>';
       if (result.originator.description == "") {
-        
-      } 
-      else {
-
+        AboutB.classList.remove('canClick');
+      }
+      if (result.originator.description == !"") {
+        AboutB.classList.add('canClick')
       }
     } catch (error) {
       console.error(error);
@@ -33,13 +33,30 @@ fetchQuote();
 
 
 //getting the buttons
+
+let result;
 const copyB = document.getElementById('btnC')
 const AboutB = document.getElementById('btnA')
 const NextB = document.getElementById('btnN')
+const description = document.getElementById('description')
+let isToggled = false;
 
 NextB.addEventListener("click", function() {
     fetchQuote();
 })
+
+if (AboutB.classList.contains('canClick')) {
+    AboutB.addEventListener('click', function() {
+        isToggled = !isToggled
+
+        if (isToggled) {
+            description.innerHTML = '<p>' + result.originator.description + '</p>'
+        }
+        if (!isToggled) {
+            description.innerHTML = ''
+        }
+    })
+}
 
 
 

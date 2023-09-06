@@ -60,6 +60,18 @@ header {
     border-bottom: solid #21f1cf 1px;
 }
 
+#description {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding: 0.3rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #e7e4e6;
+}
+
 #buttons {
     display: flex;
     flex-direction: row;
@@ -71,7 +83,7 @@ header {
 
 
 
-#buttons > button {
+#buttons > button, #buttons > .canClick {
     transition: 5ms ease;
     border-radius: 0.3rem;
     width: 10rem;
@@ -81,7 +93,12 @@ header {
     border: solid #1b181a 1px;
 }
 
-#buttons > .click:hover {
+#btnA {
+    border: solid #1b181a 1px;
+    background-color: #3e0229;
+}
+
+#buttons > .canClick:hover, #buttons > .click:hover {
     transition: 0.3s ease;
     border: solid #21f1cf 1px;
 }
