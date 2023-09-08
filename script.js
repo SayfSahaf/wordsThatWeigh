@@ -63,7 +63,7 @@ AboutB.addEventListener('click', function() {
 //adding code that will allow user to copy the quote as text
 
 CopyB.addEventListener("click", function(){
-    navigator.clipboard.writeText(`"${result.content}." - ${result.originator.name}`)
+    navigator.clipboard.writeText(`"${result.content}" - ${result.originator.name}`)
         .then(() => {
             alert('Copied')
         })  
