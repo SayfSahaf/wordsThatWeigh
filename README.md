@@ -1,5 +1,5 @@
 # wordsThatWeigh
-I built this quote-generating website to learn about how to utilize APIs. This project also allowed me to practice and hone my HTML, CSS, and Javascript.  
+I built this quote-generating website to learn how to utilize APIs. This project also allowed me to practice and hone my HTML, CSS, and Javascript.  
 [Link to the website](https://sayfsahaf.github.io/wordsThatWeigh/).
 
 The webpage has three buttons:
